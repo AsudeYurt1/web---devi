@@ -1,12 +1,11 @@
 .row{
-    padding: 3;
+    padding: 5;
     
 }
 
 a{
 
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size: larger;
 }
-img-fluid{
-    background-size: cover;
-}
+

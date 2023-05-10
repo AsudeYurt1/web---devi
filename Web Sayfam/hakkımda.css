@@ -11,7 +11,9 @@
 }
 body{
 
-background-color: rgba(177, 126, 177, 0.808);
+background-image: url(gunbatımı.jpg);
+background-attachment: fixed;
+background-size: cover;
 
 }
 span{
