@@ -14,7 +14,8 @@
           <div class="top-header">
            
              <header>Login</header>
-          </div>  
+          <form method="post" action="index.html">
+            </div>  
            <div class="input-field">
             <input type ="text" class = "input" placeholder="@sakarya.edu.tr" required>
             <i class="bx bx-user"></i>
@@ -26,9 +27,26 @@
            <div class="input-field">
             <input type ="submit" class = "submit" value="Login">
            </div>
-    
+            </form>
           
         </div>
        </div>
+
+       <script>
+        "use strict";
+          var formGiris = document.forms["girisFormu"];  // form seçimi
+          var eposta = formGiris.eposta;   // eposta alanı seçimi
+          var sifre = formGiris["sifre"];  // sifre alanı seçimi
+        
+          formGiris.onsubmit = function() {
+            if (eposta.value != "" && sifre.value != "") {
+              alert(eposta.value);  // eposta alanı value özelliği
+              alert(sifre.value);   // sifre alanı value özelliği
+            } else {
+              alert("Tüm alanları doldurun !");
+              return false;  // form gönderimini iptal et
+            }
+          }
+        </script>
 </body>
 </html>

@@ -1,24 +1,30 @@
 body{
 
-    background-image:url(resimler/izmir-4yeni.jpg);
+    background-color: brown;
+    background-color: lightsalmon;
+   
     background-attachment: fixed;
     background-size: cover;
    
     
     }
-
+    .container{
+        margin-top: auto;
+        
+    }
     p{
-   background-color: azure;
-        background-color: cornflowerblue;
+  
         border-radius: 5px;
        
     }
-    span{
-        background-color: azure;
-        background-color: cornflowerblue;
-        border-radius: 5px;
-    }
+    
     .yukseklik{
         height: 300px;
+    }
+    span{
+
+        margin: 10px;
+        padding: 20px;
+        font-size: x-large;
     }
     
