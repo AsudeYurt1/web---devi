@@ -1,16 +1,10 @@
-var liste = document.getElementById("liste");
+var listele=document.getElementById("listele")
+let data = fetch(" https://jsonplaceholder.typicode.com/photos")
+.then(response =>response.json())
+.then(veri=>{
 
-async function fetchData() {
-  try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-    const data = await response.json();
+   veri.forEach(element => {
+    listele.innerHTML+=`<li>${element.title}</li>`
+   });
 
-    data.forEach(element => {
-      liste.innerHTML += element.body;
-    });
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-fetchData();
+})
