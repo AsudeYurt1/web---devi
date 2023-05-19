@@ -1,16 +1,19 @@
+
 body{
 
-    background-image: url(resimler/izmir-2.jpg);
-    
+    background-image: url(resimler/soft.jpg);
     
     background-size: cover;
-    background-repeat:no-repeat;
+    
+    }
+
+h2{
+    padding: 30px;
+    text-align: center;
 }
-.col-md-6{
-   
-    font-weight:bold ;
-    color:black;
-    padding:40px;
+#listele{
+    font-size: large;
+    
 }
 .row{
     padding: 10;

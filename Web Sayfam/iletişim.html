@@ -4,9 +4,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="iletişim.css">
     <title>İletişim</title>
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Ana Sayfa</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="iletişim.html" target="_blank">İletişim</a>
+              <a class="nav-link" href="hakkımda.html" target="blank">Hakkında</a>
+              <a class="nav-link" href="şehrim.html">Şehrim</a>
+              <a class="nav-link" href ="mirasımız.html">Mirasımız</a>
+              <a class="nav-link" href="ilgialanı.html">İlgi alanlarım</a>
+              <a class="nav-link" href="login.html" target="_blank"><button>login</button> </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+             <h3>İletişim Formu</h3>
+      <form action="" id="formGiris">
+       <table>
+
+        <tr>
+            <td><label for="name">Adınız:</label></td>
+            <td> <input type="text" id="name" name="first-name" required></td>
+        </tr>
+        <tr>
+            <td><label for="email">E-posta Adresiniz:</label></td>
+            <td>  <input type="email" id="email" name="email"placeholder="ornek.@gmail.com" required></td>
+        </tr>
+         <tr>
+            <td> <label for="phone">Telefon:</label></td>
+               
+            <td>  <input type="tel" id="phone" name="phone" placeholder="05__" required></td>
+         </tr>
+       <tr>
+        <td><label>Cinsiyet:</label></td>
+       </tr>
+         <tr>
+          
+        <td>  <label for="male">Erkek</label> <input type="radio" id="male" name="gender" value="male" required </td>
+        <td><label for="female">Kadın</label><input type="radio" id="female" name="gender" value="female" required> </td>
+      
+       </tr>
+         <tr>
+            <td> <label for="message">Mesajınız:</label>
+                
+        </td>
+            <td><textarea type="message" name="message" rows="4" required></textarea> </td>
+        </tr>
+       <tr>
+        <td> <label for="file">Dosya Yükle:</label></td>
+        <td><input type="file" id="file" name="file"></td>
+       </tr>
+       
+        <tr>
+        <td> <input type="checkbox" id="confirm" name="confirm" required><label for="confirm">Hepsini Okudum:</label> </td>
+        <td> </td>
+       </tr>
+    </table><br>
+       
+       <input type="submit" value="Gönder">
+       <button id="clear-button" type="button">Temizle</button>
+
+      </form>
+      <script>
+        // İletişim formunu seçin
+const contactForm = document.querySelector('#formGiris');
+
+const clearButton = document.querySelector('#clear-button');
+
+
+clearButton.addEventListener('click', function() {
+    contactForm.reset();
+});
+
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Sayfanın yeniden yüklenmesini engeller
+
+    // Formdaki değerleri al
+    const firstName = document.querySelector('#name').value;
+    const email = document.querySelector('#email').value;
+    const phone = document.querySelector('#phone').value;
+    const gender = document.querySelector('input[name="gender"]:checked');
+    const message = document.querySelector('#message').value;
+    const file = document.querySelector('#file').files[0];
+    const confirm = document.querySelector('#confirm').checked;
+function isValidPhoneNumber(phoneNumber) {
+    const phoneNumberRegex = /^\d{11}$/; // 11 haneli bir sayıyı kontrol eden regex
+    return phoneNumberRegex.test(phoneNumber);
+}
+    // Değerleri kontrol etme
+    if (firstName === '' || lastName === '' || email === '' || phone === '' || !gender || message === '' || !confirm) {
+        alert('Lütfen tüm alanları doldurunuz ve gerekli kutucukları işaretleyiniz.');
+}
+else if (phone.length !== 11) {
+        alert('Telefon numarası 11 haneli olmalıdır.');
+    }
+        else {
+        
+        if (file) {
+            console.log('Dosya yüklendi:', file.name);
+        }
+        alert('Form gönderildi! Teşekkür ederiz.');
+        contactForm.reset(); // Formu sıfırla
+    }
+});
+
+
+        </script>
 </body>
 </html>

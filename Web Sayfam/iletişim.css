@@ -1,0 +1,27 @@
+.row{
+    padding: 10;
+    
+}
+
+a{
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size: larger;
+}
+form{
+    margin-left: 30px;
+ color: black;
+   background: transparent;
+   font-weight: bold;
+  
+}
+h3{
+   padding-top: 10px;
+    margin-left: 30px;
+    color: black;
+   
+}
+body{
+    background-image:url(resimler/pexels-alexander-kovalev-2847648.jpg);
+    background-size: cover;
+}
