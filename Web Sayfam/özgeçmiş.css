@@ -1,0 +1,53 @@
+
+*{
+    list-style: none;
+}
+.container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body{
+    background-color: darkgrey;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container .sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background-color:brown;
+    list-style:none ;
+    font-weight: bold;
+    color: beige;
+}
+.container .sidebar h2{
+    color:beige;
+    text-align: center;
+    list-style:none;
+    padding: 30px;
+    border-bottom: 1px  solid black;
+}
+.main-content .info {
+    margin-top: 20px;
+    margin-bottom: 10px;
+font-weight: bold;
+font-size: large;
+    margin-left: 260px;
+    margin-right: 0px;
+}
+.main-content.header{
+    margin-left: 360;
+    margin-top: 40px;
+}
+.main-content .info ul li{
+    list-style:square;
+    font-weight: normal;
+}
+#satır{
+    border-bottom: 1px solid black;
+}

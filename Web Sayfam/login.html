@@ -22,10 +22,11 @@
         <div class="navbar-nav">
           <a class="nav-link" href="iletişim.html" target="_blank">İletişim</a>
           <a class="nav-link" href="hakkımda.html" target="blank">Hakkında</a>
+          <a class="nav-link" href="özgeçmiş.html" >Özgeçmiş</a>
           <a class="nav-link" href="şehrim.html">Şehrim</a>
           <a class="nav-link" href ="mirasımız.html">Mirasımız</a>
           <a class="nav-link" href="ilgialanı.html">İlgi alanlarım</a>
-          <a class="nav-link" href="login.html" target="_blank"><button>login</button> </a>
+         
         </div>
       </div>
     </div>
@@ -38,7 +39,7 @@
           <form method="post" action="index.html">
             </div>  
            <div class="input-field">
-            <input type ="text" class = "input" placeholder="@sakarya.edu.tr" required>
+            <input type ="email" class = "input" placeholder="@sakarya.edu.tr" required>
             <i class="bx bx-user"></i> <br>
            </div>
            <div class="input-field">
@@ -66,7 +67,7 @@ loginForm.addEventListener('submit', function(event) {
     const password = document.querySelector('.input-field:nth-of-type(2) input').value;
 
     // Kullanıcı adı ve şifreyi kontrol edin
-    if (username === 'g211210035@sakarya.edu.tr' || password === 'g211210035') {
+    if (username === 'g211210035@sakarya.edu.tr' && password === 'g211210035') {
         alert('Kullanıcı adı ve şifre alanlarını doldurunuz!');
     } else {
        
